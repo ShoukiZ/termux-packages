@@ -14,7 +14,7 @@ termux_step_pre_configure() {
 }
 
 termux_step_make() {
-	CGO_ENABLED=0 go build -ldflags="-s -w -X main.Version=${TERMUX_PKG_VERSION}"
+	go build -ldflags="-s -w -X main.Version=${TERMUX_PKG_VERSION}"
 }
 
 termux_step_make_install() {
